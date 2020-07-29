@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!--meta_info-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <!--Title-->
+        <title>나홀로 쇼핑몰</title>
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+        <!--CSS-->
+        <style>
+            * {
+                font-family: 'Hi Melody', cursive;
+            }
+
+            .wrap {
+                width: 500px;
+                margin: 20px auto;
+
+            }
+
+            .p_img {
+                background-image: url("https://img.livescore.co.kr/data/editor/2003/1ea92b7baae41c19e58019ec85255a72.jpg");
+                background-size: cover;
+                background-position: center;
+                max-width: 100%;
+                height: 450px;
+                margin: 0 0 20px auto;
+            }
+
+            .p_name {
+                font-size: 40px;
+                font-weight: bold;
+
+            }
+
+            .p_price {
+                margin-left: 10px;
+                font-size: 20px;
+            }
+
+            .p_desc {
+                line-height: 150%;
+            }
+
+            .btn_center {
+                text-align: center;
+            }
+
+            .rate {
+                color: blue;
+            }
+
+        </style>
+        <script>
+            function go_submit() {
+                if(valueChk('form1')) {
+                    alert('OK!')
+                }
+
+            };
+            function valueChk(formName) {
+                let formObj = $('form[name="+formName"]');
+                let obj = formObj.find(['not_null'])
+                for (let i=0 ; i < obj.length ; i++) {
+                    let objValue = obj[i]
+                    if(objValue == '') {
+                        alert(`${objValue}는 필수 입니다!`);
+                        return false;
+                    }
+                }
+            return true;
+            };
+        </script>
+    </head>
+    <body>
+        <form name = "form1">
+            입력 1(필수) : <input type="text" name="in1" not_null="true" hg_nm="입력1"/> <br/>
+            입력 2(필수) : <input type="text" name="in2" not_null="true" hg_nm="입력2"/> <br/>
+            입력 3 : <input type="text" name="in3"/> <br/>
+
+
+        </form>
+        <button onclick = "go_submit()">
+            검증
+        </button>
+    </body>
+</html>

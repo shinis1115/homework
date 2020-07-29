@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--meta_info-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <!--Title-->
+    <title>나홀로 쇼핑몰</title>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <style>
+        * {
+            font-family: 'Hi Melody', cursive;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: 20px auto;
+
+        }
+
+        .p_img {
+            background-image: url("https://img.livescore.co.kr/data/editor/2003/1ea92b7baae41c19e58019ec85255a72.jpg");
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            height: 450px;
+            margin: 0 0 20px auto;
+        }
+
+        .p_name {
+            font-size: 40px;
+            font-weight: bold;
+
+        }
+
+        .p_price {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .p_desc {
+            line-height: 150%;
+        }
+
+        .btn_center {
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function order_completed() {
+            alert('주문이 완료되었습니다')
+
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <!--product_image-->
+    <div class="p_img"></div>
+    <!--product_info-->
+    <div>
+        <!--product_name-->
+        <a class="p_name">꾸러기</a>
+        <!--product_price-->
+        <a class="p_price">가격 : $ 100</a>
+        <!--product_description-->
+        <p class="p_desc">
+            말썽 많지만 순종적인 그런 꾸러기 입니다. 수령 즉시 화려한 조명으로 감싸주시면 아주 잘자랍니다. 인내심을 갖고 키워보세요. 몇 년 뒤에 깡이 폭발하여 절세미녀를 부인으로 얻게될지 누가 알겠습니까?
+        </p>
+    </div>
+    <!--order_info-->
+    <!--customer's name-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">주문자 이름</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <!--quantity-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">수량</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+            <option selected>-- 수량을 선택하세요--</option>
+            <option value="1">1 개 </option>
+        </select>
+    </div>
+    <!--customer's address-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">주소</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <!--customer's phone_number-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">전화번호</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <!--order_btn-->
+    <div class="btn_center">
+        <button type="button" onclick="order_completed()" class="btn btn-primary">주문하기</button>
+    </div>
+</div>
+</body>
+</html>
