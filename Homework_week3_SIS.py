@@ -1,3 +1,4 @@
+# 신인섭 3주차 과제
 import requests
 from bs4 import BeautifulSoup
 
@@ -21,7 +22,6 @@ soup = BeautifulSoup(data.text, 'html.parser')
 # 문자열의 첫줄만 출력할 수 있는 방법은?
 # 제목 v순위테이블 > td.info > a.title.ellipsis
 # 아티스트 v순위테이블 > td.info > a.artist.ellipsis
-# songs = soup.select('#body-content > div.newest-list > div > table > tbody >.list')
 songs = soup.select('#body-content > div.newest-list > div > table > tbody >tr.list') # 순위차트의 각 line
 for song in songs :
     # rank_info = td.number의 모든 text = 순위 + 빈칸 + (줄바꿈 = \n) + 순위변동정보
